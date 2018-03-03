@@ -10,29 +10,29 @@
     @Html.ActionLink("Registrar nuevo", "Create", null, new { @class = "btn btn-primary" })
     @using (Html.BeginForm())
     {
-<p>
-    Género: @Html.DropDownList("movieGenre", (SelectList)ViewBag.movieGenre, "Select genre", new { @class = "form-control" })
-    Título: @Html.TextBox("SearchString",null, new { @class = "form-control" }) <br />
-    <input type="submit" class="btn btn-primary" value="Filter" />
-</p>
+    <div class="input-group col-md-10">
+        Género: @Html.DropDownList("movieGenre", (SelectList)ViewBag.movieGenre, "Todos", new { @class = "form-control" })
+        Título: @Html.TextBox("SearchString", null, new { @class = "form-control" })
+        <input type="submit" class="btn btn-primary" value="Buscar" />
+    </div>
 }
-    </p>
+  </p>  <br>
     <table class="table">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayName("Título")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayName("Fecha de lanzamiento")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Genre)
+                @Html.DisplayName("Género")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayName("Precio")
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rating)
+                @Html.DisplayName("Clasificación")
             </th>
             <th></th>
         </tr>
